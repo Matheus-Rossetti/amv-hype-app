@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:word_cloud/word_cloud.dart';
+import '/widgets/heat_word_map.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -30,7 +31,7 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(child: NuvemDePalavras()),
+      body: Center(child: HeatWordMap()),
     );
   }
 }
