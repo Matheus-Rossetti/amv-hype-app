@@ -4,7 +4,6 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:word_cloud/word_cloud.dart';
-import '/widgets/heat_word_map.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -31,7 +30,7 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(child: HeatWordMap()),
+      body: Center(child: NuvemDePalavras()),
     );
   }
 }
@@ -71,19 +70,18 @@ class _NuvemDePalavrasState extends State<NuvemDePalavras> {
   @override
   Widget build(BuildContext context) {
     return WordCloudView(
-      data: myData,
-      mapwidth: 500,
-      mapheight: 500,
-      // mapcolor: Color.fromARGB(255, 174, 183, 235),
-      colorlist: [
-        Color(0xff008040),
-        Color(0xffE4B004),
-        Color(0xff80AE28),
-        Color(0xff1480C0),
-        Colors.black
-      ],
-      shape: WordCloudEllipse(majoraxis: 250, minoraxis: 200),
-    );
+        data: myData,
+        mapwidth: 500,
+        mapheight: 500,
+        // mapcolor: Color.fromARGB(255, 174, 183, 235),
+        colorlist: [
+          Color(0xff008040),
+          Color(0xffE4B004),
+          Color(0xff80AE28),
+          Color(0xff1480C0),
+          Colors.black
+        ],
+        shape: WordCloudEllipse(majoraxis: 500, minoraxis: 500));
   }
 }
 

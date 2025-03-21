@@ -29,12 +29,7 @@ class _HeatWordMapState extends State<HeatWordMap> {
               ),
             ),
           ),
-          Positioned(
-              top: MediaQuery.of(context).size.height.toDouble() / 7,
-              left: MediaQuery.of(context).size.width.toDouble() / 7,
-              child: Text(
-                'palavra',
-              )),
+
           Positioned(
               top: MediaQuery.of(context).size.height.toDouble() / 4,
               left: MediaQuery.of(context).size.width.toDouble() / 4,
